@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: platform-lab
+  labels:
+    app: nginx-demo
+    app.kubernetes.io/part-of: platform-lab
+spec:
+  type: ClusterIP
+
+  selector:
+    app: nginx-demo
+
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http

@@ -1,0 +1,28 @@
+# Secrets locales
+kubernetes/java-app/02-secret.yaml
+
+# Java
+target/
+*.jar
+
+# Python y Ansible
+.venv/
+__pycache__/
+*.pyc
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# IntelliJ
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

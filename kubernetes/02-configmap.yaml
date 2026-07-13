@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-content
+  namespace: platform-lab
+  labels:
+    app: nginx-demo
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>Platform Lab</title>
+    </head>
+    <body color="white" bgcolor="black">
+      <h1>Platform Lab actualizado mediante ConfigMap</h1>
+      <p>Aplicación Nginx desplegada mediante Kubernetes.</p>
+      <p>Esta página se carga desde un ConfigMap.</p>
+    </body>
+    </html>
