@@ -19,5 +19,9 @@ spec:
     namespace: platform-lab
 
   syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
+  automated:
+    enabled: true
+    prune: true
+    selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
