@@ -9,19 +9,16 @@ spec:
   source:
     repoURL: https://github.com/jelsync/platform-lab.git
     targetRevision: main
-    path: kubernetes/java-app
-    directory:
-      recurse: true
-      exclude: "02-secret.example.yaml"
+    path: kubernetes/java-app/overlays/local
 
   destination:
     server: https://kubernetes.default.svc
     namespace: platform-lab
 
   syncPolicy:
-  automated:
-    enabled: true
-    prune: true
-    selfHeal: true
-  syncOptions:
-    - CreateNamespace=true
+    automated:
+      enabled: true
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

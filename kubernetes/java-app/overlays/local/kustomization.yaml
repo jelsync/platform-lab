@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: platform-lab
+
+resources:
+  - ../../base
+
+images:
+  - name: ghcr.io/jelsync/platform-lab-java
+    newName: ghcr.io/jelsync/platform-lab-java
+    newTag: 1.0.1
+
+replicas:
+  - name: java-demo
+    count: 3
+
+configMapGenerator:
+  - name: java-demo-config
+    literals:
+      - SERVER_PORT=8081
+      - SPRING_PROFILES_ACTIVE=dev
+      - AWS_REGION=us-east-1

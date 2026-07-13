@@ -2,13 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: java-demo
-  namespace: platform-lab
   labels:
     app: java-demo
     app.kubernetes.io/name: java-demo
     app.kubernetes.io/part-of: platform-lab
 spec:
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 5
 
   selector:
@@ -41,7 +40,7 @@ spec:
 
       containers:
         - name: java-demo
-          image: ghcr.io/jelsync/platform-lab-java:1.0.1
+          image: ghcr.io/jelsync/platform-lab-java:1.0.0
           imagePullPolicy: IfNotPresent
 
           ports:
