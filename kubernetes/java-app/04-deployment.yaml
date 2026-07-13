@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/name: java-demo
     app.kubernetes.io/part-of: platform-lab
 spec:
-  replicas: 2
+  replicas: 3
   revisionHistoryLimit: 5
 
   selector:
