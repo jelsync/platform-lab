@@ -41,7 +41,7 @@ spec:
 
       containers:
         - name: java-demo
-          image: ghcr.io/jelsync/platform-lab-java:1.0.0
+          image: ghcr.io/jelsync/platform-lab-java:1.0.1
           imagePullPolicy: IfNotPresent
 
           ports:
